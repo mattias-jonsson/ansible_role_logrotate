@@ -20,16 +20,24 @@ Role Variables
 Available variables are listed below:
 
     name:
-Name of logrotate configurationfile  
-    paths: 
-List of files to rotate  
-    options:
-List of rotation options  
-    postrotate_scripts:
-List of scripts to run after rotation  
-    prerotate_scripts:
-List of scripts to run before rotation
 
+Name of logrotate configurationfile
+
+    paths: 
+
+List of files to rotate
+
+    options:
+
+List of rotation options
+
+    postrotate_scripts:
+
+List of scripts to run after rotation
+
+    prerotate_scripts:
+
+List of scripts to run before rotation
 
 Dependencies
 ------------
