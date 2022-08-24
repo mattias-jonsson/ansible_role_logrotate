@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Mattias Jonsson
+  description: Installs and configures logrotate on supported distributions.
+  min_ansible_version: 2.9.27
+  role_name: ansible_role_logrotate
+  license: MIT
+  platforms:
+  - name: EL
+    versions:
+    - "7"
+    - "8"
