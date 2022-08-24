@@ -1,0 +1,6 @@
+---
+
+ansible_role_logrotate_dependencies:
+  - logrotate
+
+ansible_role_logrotate_confd_path: /etc/logrotate.d
