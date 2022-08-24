@@ -75,7 +75,7 @@ Example Playbook
               - /scripts/tva.sh
 
       roles:
-         - role: ansible_role_logrotate
+         - ansible_role_logrotate
 
 License
 -------
