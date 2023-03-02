@@ -1,12 +1,12 @@
 ---
 
-- name: create logrotate configuration files from template
+- name: Create logrotate configuration files from template.
   become: true
-  template:
+  ansible.builtin.template:
     src: ansible_role_logrotated_template.j2
     dest: "{{ ansible_role_logrotate_confd_path }}/{{ item.name }}"
     owner: root
     group: root
-    mode: 0644
-    backup: yes
+    mode: '0644'
+    backup: true
   with_items: "{{ ansible_role_logrotate_options }}"
