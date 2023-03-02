@@ -4,7 +4,7 @@ Ansible Role: ansible_role_logrotate
 Installs and configures logrotate on the following Linux distributions:
 
 <ul>
-<li>Red Hat Enterprise Linux 7  
+<li>Red Hat Enterprise Linux 7
 <li>Red Hat Enterprise Linux 8
 </ul>
 
@@ -17,27 +17,16 @@ None.
 Role Variables
 --------------
 
-Available variables are listed below:
+| `ansible_role_vmware_tools_remove_features` | No | [] | A list of features to remove at installation, Please se VMware Tools documentation for list of features. |
 
-    name:
+| Variable | Required | Default | Comments |
+| -------- | -------- | ------- | -------- |
+| `name` | Yes | | Name of logrotate configurationfile. |
+| `paths` | Yes | [] | List of files to rotate |
+| `options` | Yes | [] | List of rotation options, see logrotate man page for availbale options. |
+| `postrotate_scripts` | Yes | [] | List of scripts to run after rotation |
+| `prerotate_scripts` | Yes | [] | List of scripts to run before rotation |
 
-Name of logrotate configurationfile
-
-    paths: 
-
-List of files to rotate
-
-    options:
-
-List of rotation options
-
-    postrotate_scripts:
-
-List of scripts to run after rotation
-
-    prerotate_scripts:
-
-List of scripts to run before rotation
 
 Dependencies
 ------------
@@ -54,7 +43,7 @@ Example Playbook
       vars:
         ansible_role_logrotate_options:
           - name: testfile_1.conf
-            paths: 
+            paths:
               - /var/log/testfile1
             options:
               - daily
@@ -64,7 +53,7 @@ Example Playbook
             prerotate_scripts:
               - /scripts/tva.sh
           - name: testfile_2.conf
-            paths: 
+            paths:
               - /var/log/testfile2
             options:
               - daily
