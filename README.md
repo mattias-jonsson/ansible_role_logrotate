@@ -17,8 +17,6 @@ None.
 Role Variables
 --------------
 
-| `ansible_role_vmware_tools_remove_features` | No | [] | A list of features to remove at installation, Please se VMware Tools documentation for list of features. |
-
 | Variable | Required | Default | Comments |
 | -------- | -------- | ------- | -------- |
 | `name` | Yes | | Name of logrotate configurationfile. |
